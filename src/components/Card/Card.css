@@ -1,0 +1,18 @@
+.otter-card {
+  border: 1px solid var(--otter-border);
+  border-radius: var(--otter-radius-lg);
+  padding: var(--otter-space-5);
+  background: var(--otter-surface-raised);
+  color: var(--otter-text);
+  font-family: var(--otter-font);
+  transition:
+    transform var(--otter-motion-normal) var(--otter-ease),
+    box-shadow var(--otter-motion-normal);
+}
+.otter-card.is-interactive {
+  cursor: pointer;
+}
+.otter-card.is-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--otter-shadow-md);
+}

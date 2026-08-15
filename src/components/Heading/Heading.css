@@ -1,0 +1,20 @@
+.otter-heading {
+  margin: 0;
+  color: var(--otter-text);
+  font-family: var(--otter-font);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+.otter-heading--display {
+  font-size: var(--otter-fs-display);
+  line-height: var(--otter-lh-display);
+  letter-spacing: -0.045em;
+}
+.otter-heading--h1 {
+  font-size: var(--otter-fs-h1);
+  line-height: var(--otter-lh-heading);
+}
+.otter-heading--h2 {
+  font-size: var(--otter-fs-h2);
+  line-height: var(--otter-lh-heading);
+}

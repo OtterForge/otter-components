@@ -1,0 +1,21 @@
+.otter-avatar {
+  width: var(--otter-avatar-m);
+  height: var(--otter-avatar-m);
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 3px solid var(--otter-surface);
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--otter-primary-600), var(--otter-secondary-500));
+  color: #fff;
+  font: 800 var(--otter-text-xs) var(--otter-font);
+}
+.otter-avatar--s {
+  width: var(--otter-avatar-s);
+  height: var(--otter-avatar-s);
+}
+.otter-avatar--l {
+  width: var(--otter-avatar-l);
+  height: var(--otter-avatar-l);
+}

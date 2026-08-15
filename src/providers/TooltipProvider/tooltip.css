@@ -1,0 +1,21 @@
+.otter-tooltip {
+  position: fixed;
+  z-index: 1000;
+  max-width: 260px;
+  padding: 0.48rem 0.7rem;
+  border-radius: var(--otter-radius-sm);
+  background: var(--otter-text);
+  color: var(--otter-page);
+  font: 650 var(--otter-text-xs)/1.35 var(--otter-font);
+  box-shadow: var(--otter-shadow-md);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, calc(-100% + 4px));
+  transition:
+    opacity var(--otter-motion-fast),
+    transform var(--otter-motion-fast);
+}
+.otter-tooltip[data-open='true'] {
+  opacity: 1;
+  transform: translate(-50%, -100%);
+}

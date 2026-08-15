@@ -1,0 +1,13 @@
+.otter-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65em;
+  color: var(--otter-text);
+  font: var(--otter-text-sm) var(--otter-font);
+  cursor: pointer;
+}
+.otter-choice input {
+  width: 1.15em;
+  height: 1.15em;
+  accent-color: var(--otter-action);
+}

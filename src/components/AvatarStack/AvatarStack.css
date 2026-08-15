@@ -1,0 +1,18 @@
+.otter-avatar-stack {
+  display: flex;
+  align-items: center;
+}
+.otter-avatar-stack > * + * {
+  margin-left: calc(-12px * var(--otter-type-scale));
+}
+.otter-avatar-more {
+  width: var(--otter-avatar-m);
+  height: var(--otter-avatar-m);
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--otter-surface);
+  border-radius: 50%;
+  background: var(--otter-surface-soft);
+  color: var(--otter-text);
+  font: 750 var(--otter-text-xs) var(--otter-font);
+}

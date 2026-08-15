@@ -1,0 +1,28 @@
+.otter-progress-wrap {
+  display: grid;
+  gap: 0.45em;
+  color: var(--otter-muted);
+  font: var(--otter-text-sm) var(--otter-font);
+}
+.otter-progress-wrap > span {
+  display: flex;
+  justify-content: space-between;
+}
+.otter-progress {
+  width: 100%;
+  height: var(--otter-track-size);
+  border: 0;
+  border-radius: 99px;
+  overflow: hidden;
+  background: var(--otter-surface-soft);
+}
+.otter-progress::-webkit-progress-bar {
+  background: var(--otter-surface-soft);
+}
+.otter-progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--otter-action), var(--otter-secondary-500));
+  border-radius: 99px;
+}
+.otter-progress::-moz-progress-bar {
+  background: var(--otter-action);
+}

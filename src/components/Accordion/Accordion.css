@@ -1,0 +1,6 @@
+.otter-accordion {
+  overflow: hidden;
+  border: 1px solid var(--otter-border);
+  border-radius: var(--otter-radius-lg);
+  background: var(--otter-surface);
+}

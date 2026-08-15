@@ -1,0 +1,14 @@
+.otter-separator {
+  display: block;
+  background: var(--otter-border);
+}
+.otter-separator--horizontal {
+  width: 100%;
+  height: 1px;
+  margin: var(--otter-space-4) 0;
+}
+.otter-separator--vertical {
+  width: 1px;
+  align-self: stretch;
+  margin: 0 var(--otter-space-4);
+}

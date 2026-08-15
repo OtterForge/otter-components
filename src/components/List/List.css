@@ -1,0 +1,8 @@
+.otter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--otter-border);
+  border-radius: var(--otter-radius-lg);
+}

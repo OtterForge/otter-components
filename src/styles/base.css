@@ -1,0 +1,14 @@
+@import './tokens.css';
+.otter-root {
+  background: var(--otter-page);
+  color: var(--otter-text);
+  font-family: var(--otter-font);
+  font-size: var(--otter-fs-body);
+}
+.otter-root * {
+  box-sizing: border-box;
+}
+.otter-root :focus-visible {
+  outline: var(--otter-focus-size) solid color-mix(in srgb, var(--otter-focus) 70%, transparent);
+  outline-offset: 3px;
+}

@@ -1,0 +1,65 @@
+.otter-field {
+  display: grid;
+  gap: 0.45em;
+  color: var(--otter-muted);
+  font: var(--otter-text-sm)/1.4 var(--otter-font);
+}
+.otter-input-wrap {
+  position: relative;
+  display: block;
+}
+.otter-input {
+  width: 100%;
+  min-height: var(--otter-control-h);
+  border: 1px solid color-mix(in srgb, var(--otter-border) 54%, transparent);
+  background: var(--otter-surface-soft);
+  color: var(--otter-text);
+  border-radius: var(--otter-radius-full);
+  padding: 0.7em 1em;
+  font: inherit;
+  box-shadow: inset 0 1px 1px rgb(15 23 42/0.025);
+  transition:
+    background var(--otter-motion-fast),
+    border-color var(--otter-motion-fast),
+    box-shadow var(--otter-motion-fast);
+}
+.otter-input:hover {
+  background: color-mix(in srgb, var(--otter-surface-soft) 70%, var(--otter-surface));
+}
+.otter-input:focus {
+  outline: 0;
+  background: var(--otter-surface);
+  border-color: color-mix(in srgb, var(--otter-focus) 62%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--otter-focus) 13%, transparent);
+}
+.otter-input[aria-invalid='true'] {
+  border-color: color-mix(in srgb, var(--otter-danger) 72%, transparent);
+  background: color-mix(in srgb, var(--otter-danger) 5%, var(--otter-surface));
+}
+.otter-input.has-prefix {
+  padding-left: 2.6em;
+}
+.otter-input.has-suffix {
+  padding-right: 3.25em;
+}
+.otter-input-affix {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--otter-muted);
+  pointer-events: none;
+}
+.otter-input-prefix {
+  left: 1em;
+}
+.otter-input-suffix {
+  right: 1em;
+}
+.otter-required,
+.otter-field-error {
+  color: var(--otter-danger);
+}
+.otter-field-error,
+.otter-field-hint {
+  font-size: var(--otter-text-xs);
+}

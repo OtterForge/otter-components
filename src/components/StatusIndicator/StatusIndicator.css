@@ -1,0 +1,30 @@
+.otter-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--otter-muted);
+  font: var(--otter-text-sm) var(--otter-font);
+}
+.otter-status-dot {
+  width: var(--otter-status-size);
+  height: var(--otter-status-size);
+  border-radius: 50%;
+  background: var(--otter-success);
+}
+.otter-status-dot--warning {
+  background: var(--otter-warning);
+}
+.otter-status-dot--danger {
+  background: var(--otter-danger);
+}
+.otter-status-dot--info {
+  background: var(--otter-info);
+}
+.otter-status-dot[data-pulse='true'] {
+  animation: otter-pulse 1.8s ease-in-out infinite;
+}
+@keyframes otter-pulse {
+  50% {
+    box-shadow: 0 0 0 5px transparent;
+  }
+}

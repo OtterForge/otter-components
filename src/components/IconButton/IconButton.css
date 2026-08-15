@@ -1,0 +1,26 @@
+.otter-icon-button {
+  width: var(--otter-control-h);
+  height: var(--otter-control-h);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--otter-border);
+  border-radius: 50%;
+  background: var(--otter-surface);
+  color: var(--otter-text);
+  font-size: var(--otter-icon-size);
+  cursor: pointer;
+  transition:
+    transform var(--otter-motion-normal) var(--otter-ease),
+    background var(--otter-motion-fast),
+    box-shadow var(--otter-motion-fast);
+}
+.otter-icon-button:hover {
+  transform: translateY(-2px) rotate(4deg);
+  background: var(--otter-surface-soft);
+  box-shadow: var(--otter-shadow-sm);
+}
+.otter-icon-button--primary {
+  background: var(--otter-action);
+  border-color: var(--otter-action);
+  color: var(--otter-on-action);
+}

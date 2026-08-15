@@ -1,0 +1,133 @@
+:root {
+  --otter-space-1: calc(4px * var(--otter-type-scale));
+  --otter-space-2: calc(8px * var(--otter-type-scale));
+  --otter-space-3: calc(12px * var(--otter-type-scale));
+  --otter-space-4: calc(16px * var(--otter-type-scale));
+  --otter-space-5: calc(20px * var(--otter-type-scale));
+  --otter-space-6: calc(24px * var(--otter-type-scale));
+  --otter-space-8: calc(32px * var(--otter-type-scale));
+  --otter-radius-sm: 0.45rem;
+  --otter-radius-md: 0.75rem;
+  --otter-radius-lg: 1.1rem;
+  --otter-radius-xl: 1.5rem;
+  --otter-radius-full: 999px;
+  --otter-font: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --otter-font-mono: 'Roboto Mono', 'SFMono-Regular', Consolas, monospace;
+  --otter-type-scale: 1;
+  --otter-fs-display: calc(40px * var(--otter-type-scale));
+  --otter-fs-h1: calc(30px * var(--otter-type-scale));
+  --otter-fs-h2: calc(22px * var(--otter-type-scale));
+  --otter-fs-body-lg: calc(16px * var(--otter-type-scale));
+  --otter-fs-body: calc(14px * var(--otter-type-scale));
+  --otter-fs-meta: calc(13px * var(--otter-type-scale));
+  --otter-fs-caption: calc(12px * var(--otter-type-scale));
+  --otter-fs-micro: calc(11px * var(--otter-type-scale));
+  --otter-avatar-s: calc(34px * var(--otter-type-scale));
+  --otter-avatar-m: calc(42px * var(--otter-type-scale));
+  --otter-avatar-l: calc(54px * var(--otter-type-scale));
+  --otter-icon-size: calc(16px * var(--otter-type-scale));
+  --otter-spinner-size: calc(28px * var(--otter-type-scale));
+  --otter-status-size: calc(9px * var(--otter-type-scale));
+  --otter-track-size: calc(9px * var(--otter-type-scale));
+  --otter-lh-display: 1.05;
+  --otter-lh-heading: 1.2;
+  --otter-lh-body: 1.5;
+  --otter-text-xs: var(--otter-fs-caption);
+  --otter-text-sm: var(--otter-fs-body);
+  --otter-text-md: var(--otter-fs-body-lg);
+  --otter-page: #f5f7f8;
+  --otter-surface: #fff;
+  --otter-surface-raised: #fff;
+  --otter-surface-soft: #eef2f3;
+  --otter-text: #101719;
+  --otter-muted: #647174;
+  --otter-border: #dce3e5;
+  --otter-action: var(--otter-primary-600);
+  --otter-action-hover: var(--otter-primary-700);
+  --otter-focus: var(--otter-secondary-500);
+  --otter-on-action: var(--otter-on-primary-600);
+  --otter-success: #16a36a;
+  --otter-warning: #d97706;
+  --otter-danger: #dc3545;
+  --otter-info: #2563eb;
+  --otter-control-h: 42px;
+  --otter-density: 0.875;
+  --otter-focus-size: 3px;
+  --otter-shadow-sm: 0 1px 3px rgb(15 23 42/0.05);
+  --otter-shadow-md: 0 16px 45px rgb(15 23 42/0.14);
+  --otter-motion-fast: 150ms;
+  --otter-motion-normal: 260ms;
+  --otter-motion-slow: 380ms;
+  --otter-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-otter-theme='dark'] {
+  --otter-page: #0b1012;
+  --otter-surface: #11191c;
+  --otter-surface-raised: #162125;
+  --otter-surface-soft: #1b292e;
+  --otter-text: #f1f6f5;
+  --otter-muted: #96a7aa;
+  --otter-border: #27383d;
+  --otter-action: var(--otter-primary-400);
+  --otter-action-hover: var(--otter-primary-300);
+  --otter-focus: var(--otter-secondary-400);
+  --otter-on-action: var(--otter-on-primary-400);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  [data-otter-theme='system'] {
+    --otter-page: #0b1012;
+    --otter-surface: #11191c;
+    --otter-surface-raised: #162125;
+    --otter-surface-soft: #1b292e;
+    --otter-text: #f1f6f5;
+    --otter-muted: #96a7aa;
+    --otter-border: #27383d;
+    --otter-action: var(--otter-primary-400);
+    --otter-action-hover: var(--otter-primary-300);
+    --otter-focus: var(--otter-secondary-400);
+    --otter-on-action: var(--otter-on-primary-400);
+    color-scheme: dark;
+  }
+}
+[data-otter-density='s'] {
+  --otter-density: 0.79;
+  --otter-control-h: 38px;
+  --otter-type-scale: 0.9;
+}
+[data-otter-density='m'] {
+  --otter-density: 0.875;
+  --otter-control-h: 42px;
+  --otter-type-scale: 1;
+}
+[data-otter-density='l'] {
+  --otter-density: 1;
+  --otter-control-h: 48px;
+  --otter-type-scale: 1.125;
+}
+[data-otter-contrast='high'] {
+  --otter-border: #708185;
+  --otter-focus-size: 4px;
+}
+[data-otter-contrast='cvd'] {
+  --otter-success: #1473e6;
+  --otter-warning: #9a6700;
+  --otter-danger: #d13b00;
+  --otter-focus: #0067c5;
+}
+[data-otter-motion='off'] *,
+[data-otter-motion='off'] *::before,
+[data-otter-motion='off'] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-otter-motion] *,
+  [data-otter-motion] *::before,
+  [data-otter-motion] *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

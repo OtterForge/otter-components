@@ -1,0 +1,58 @@
+.otter-list-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.8em;
+  align-items: center;
+  padding: 0.75em 0.85em;
+  border-bottom: 1px solid var(--otter-border);
+  color: var(--otter-text);
+  font-family: var(--otter-font);
+  transition:
+    background var(--otter-motion-fast),
+    padding var(--otter-motion-normal);
+}
+.otter-list-item:last-child {
+  border: 0;
+}
+.otter-list-item.is-interactive {
+  cursor: pointer;
+}
+.otter-list-item.is-interactive:hover {
+  padding-left: 1em;
+  background: var(--otter-surface-soft);
+}
+.otter-list-main {
+  min-width: 0;
+}
+.otter-list-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: var(--otter-text-sm);
+  font-weight: 700;
+}
+.otter-list-description {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--otter-muted);
+  font-size: var(--otter-text-xs);
+}
+.otter-list-meta {
+  color: var(--otter-muted);
+  font-size: var(--otter-text-xs);
+}
+.otter-list-unread {
+  width: calc(7px * var(--otter-type-scale));
+  height: calc(7px * var(--otter-type-scale));
+  border-radius: 50%;
+  background: var(--otter-action);
+}
+.otter-list-unread > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}

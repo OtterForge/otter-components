@@ -1,0 +1,58 @@
+.otter-accordion-item {
+  border-bottom: 1px solid var(--otter-border);
+}
+.otter-accordion-item:last-child {
+  border: 0;
+}
+.otter-accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.9em 1em;
+  border: 0;
+  background: transparent;
+  color: var(--otter-text);
+  font: 700 var(--otter-text-sm) var(--otter-font);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background var(--otter-motion-fast),
+    color var(--otter-motion-fast);
+}
+.otter-accordion-trigger:hover {
+  background: var(--otter-surface-soft);
+}
+.otter-accordion-item[data-open='true'] > .otter-accordion-trigger {
+  color: var(--otter-action);
+  background: color-mix(in srgb, var(--otter-action) 6%, var(--otter-surface));
+}
+.otter-accordion-chevron {
+  font-size: 1.35em;
+  color: var(--otter-muted);
+  transition: transform var(--otter-motion-normal) var(--otter-ease);
+}
+.otter-accordion-item[data-open='true'] > .otter-accordion-trigger .otter-accordion-chevron {
+  transform: rotate(90deg);
+}
+.otter-accordion-grid {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows var(--otter-motion-normal) var(--otter-ease),
+    opacity var(--otter-motion-fast);
+}
+.otter-accordion-grid > div {
+  overflow: hidden;
+}
+.otter-accordion-item[data-open='true'] > .otter-accordion-grid {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.otter-accordion-content {
+  padding: 0 1em 1em;
+  color: var(--otter-muted);
+  font: var(--otter-text-sm)/1.5 var(--otter-font);
+}

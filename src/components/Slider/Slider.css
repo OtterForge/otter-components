@@ -1,0 +1,18 @@
+.otter-slider {
+  display: grid;
+  gap: 0.45em;
+  color: var(--otter-muted);
+  font: var(--otter-text-sm) var(--otter-font);
+}
+.otter-slider > span {
+  display: flex;
+  justify-content: space-between;
+}
+.otter-slider input {
+  width: 100%;
+  accent-color: var(--otter-action);
+}
+.otter-slider output {
+  color: var(--otter-text);
+  font-weight: 700;
+}

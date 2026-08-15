@@ -1,0 +1,15 @@
+.otter-select-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65em 1em;
+  text-align: left;
+  cursor: pointer;
+}
+.otter-select-control .otter-select-chevron {
+  position: static;
+  transform: none;
+}
+.otter-custom-select[data-open='true'] .otter-select-control .otter-select-chevron {
+  transform: rotate(180deg);
+}

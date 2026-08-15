@@ -1,0 +1,24 @@
+.otter-textarea-field {
+  display: grid;
+  gap: 0.45em;
+  color: var(--otter-muted);
+  font: var(--otter-text-sm)/1.4 var(--otter-font);
+}
+.otter-textarea {
+  min-height: calc(100px * var(--otter-type-scale));
+  width: 100%;
+  resize: vertical;
+  border: 1px solid color-mix(in srgb, var(--otter-border) 54%, transparent);
+  border-radius: var(--otter-radius-md);
+  background: var(--otter-surface-soft);
+  color: var(--otter-text);
+  padding: 0.8em;
+  font: inherit;
+  transition: 0.15s;
+}
+.otter-textarea:focus {
+  outline: 0;
+  background: var(--otter-surface);
+  border-color: var(--otter-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--otter-focus) 13%, transparent);
+}

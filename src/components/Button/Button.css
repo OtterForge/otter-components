@@ -1,0 +1,68 @@
+.otter-button {
+  min-height: var(--otter-control-h);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  border: 1px solid transparent;
+  border-radius: var(--otter-radius-full);
+  padding: 0.65em 1.2em;
+  font: 750 var(--otter-text-sm)/1 var(--otter-font);
+  cursor: pointer;
+  transition:
+    transform var(--otter-motion-normal) var(--otter-ease),
+    background var(--otter-motion-fast),
+    box-shadow var(--otter-motion-normal);
+}
+.otter-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+.otter-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.otter-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.otter-button--primary {
+  background: var(--otter-action);
+  color: var(--otter-on-action);
+}
+.otter-button--primary:hover {
+  background: var(--otter-action-hover);
+  box-shadow: 0 7px 20px color-mix(in srgb, var(--otter-action) 28%, transparent);
+}
+.otter-button--secondary {
+  background: var(--otter-surface);
+  border-color: var(--otter-border);
+  color: var(--otter-text);
+}
+.otter-button--ghost {
+  background: transparent;
+  color: var(--otter-action);
+}
+.otter-button--danger {
+  background: var(--otter-danger);
+  color: #fff;
+}
+.otter-button--s {
+  min-height: calc(34px * var(--otter-type-scale));
+  padding: 0.45em 0.85em;
+}
+.otter-button--l {
+  min-height: calc(50px * var(--otter-type-scale));
+  padding: 0.8em 1.45em;
+}
+.otter-button__spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: otter-spin 0.7s linear infinite;
+}
+@keyframes otter-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

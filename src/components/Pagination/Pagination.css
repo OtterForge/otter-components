@@ -1,0 +1,30 @@
+.otter-pagination {
+  display: flex;
+  gap: 0.35em;
+}
+.otter-pagination button {
+  width: var(--otter-control-h);
+  height: var(--otter-control-h);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--otter-border);
+  border-radius: 50%;
+  background: var(--otter-surface);
+  color: var(--otter-text);
+  cursor: pointer;
+  transition:
+    transform var(--otter-motion-fast),
+    background var(--otter-motion-fast);
+}
+.otter-pagination button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: var(--otter-surface-soft);
+}
+.otter-pagination button[aria-current='page'] {
+  background: var(--otter-action);
+  border-color: var(--otter-action);
+  color: var(--otter-on-action);
+}
+.otter-pagination button:disabled {
+  opacity: 0.4;
+}

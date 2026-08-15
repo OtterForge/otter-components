@@ -1,0 +1,39 @@
+.otter-switch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  color: var(--otter-text);
+  font: var(--otter-text-sm) var(--otter-font);
+  cursor: pointer;
+}
+.otter-switch {
+  position: relative;
+  width: calc(50px * var(--otter-type-scale));
+  height: calc(28px * var(--otter-type-scale));
+  appearance: none;
+  border: 1px solid var(--otter-border);
+  border-radius: 99px;
+  background: var(--otter-surface-soft);
+  cursor: pointer;
+  transition: 0.22s;
+  box-shadow: inset 0 1px 3px rgb(0 0 0/0.12);
+}
+.otter-switch::before {
+  content: '';
+  position: absolute;
+  width: calc(20px * var(--otter-type-scale));
+  height: calc(20px * var(--otter-type-scale));
+  left: calc(3px * var(--otter-type-scale));
+  top: calc(3px * var(--otter-type-scale));
+  border-radius: 50%;
+  background: var(--otter-surface);
+  box-shadow: 0 2px 7px rgb(0 0 0/0.26);
+  transition: 0.22s var(--otter-ease);
+}
+.otter-switch:checked {
+  background: var(--otter-action);
+  border-color: var(--otter-action);
+}
+.otter-switch:checked::before {
+  transform: translateX(calc(22px * var(--otter-type-scale)));
+}

@@ -1,0 +1,21 @@
+.otter-spinner {
+  display: inline-block;
+  width: var(--otter-spinner-size);
+  height: var(--otter-spinner-size);
+  border: 3px solid var(--otter-border);
+  border-top-color: var(--otter-action);
+  border-radius: 50%;
+  animation: otter-spin 0.75s linear infinite;
+}
+.otter-spinner > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@keyframes otter-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
