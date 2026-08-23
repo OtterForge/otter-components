@@ -8,7 +8,7 @@ export interface ProgressProps {
 export const Progress = ({
   value,
   max = 100,
-  label = 'Fortschritt',
+  label = 'Progress',
   showValue = true,
 }: ProgressProps) => {
   const percent = Math.round((value / max) * 100);

@@ -2,7 +2,7 @@
   display: grid;
   gap: 0.45em;
   color: var(--otter-muted);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
 }
 .otter-progress-wrap > span {
   display: flex;
@@ -14,15 +14,16 @@
   border: 0;
   border-radius: 99px;
   overflow: hidden;
-  background: var(--otter-surface-soft);
+  background: var(--otter-control);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--otter-text) 8%, transparent);
 }
 .otter-progress::-webkit-progress-bar {
-  background: var(--otter-surface-soft);
+  background: var(--otter-control);
 }
 .otter-progress::-webkit-progress-value {
-  background: linear-gradient(90deg, var(--otter-action), var(--otter-secondary-500));
+  background: linear-gradient(90deg, var(--otter-primary-700), var(--otter-primary-400));
   border-radius: 99px;
 }
 .otter-progress::-moz-progress-bar {
-  background: var(--otter-action);
+  background: linear-gradient(90deg, var(--otter-primary-700), var(--otter-primary-400));
 }

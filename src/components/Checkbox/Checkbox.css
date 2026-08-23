@@ -3,11 +3,67 @@
   align-items: center;
   gap: 0.65em;
   color: var(--otter-text);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
   cursor: pointer;
 }
 .otter-choice input {
   width: 1.15em;
   height: 1.15em;
-  accent-color: var(--otter-action);
+  appearance: none;
+  display: grid;
+  place-content: center;
+  border: 1.5px solid color-mix(in srgb, var(--otter-text) 42%, var(--otter-border));
+  background: var(--otter-surface);
+  cursor: pointer;
+  transition:
+    background var(--otter-motion-fast),
+    border-color var(--otter-motion-fast),
+    box-shadow var(--otter-motion-fast);
+}
+.otter-choice input[type='checkbox'] {
+  border-radius: 0.3em;
+}
+.otter-choice input[type='radio'] {
+  border-radius: 50%;
+}
+.otter-choice input::before {
+  content: '';
+  width: 0.52em;
+  height: 0.52em;
+  transform: scale(0);
+  transition: transform var(--otter-motion-fast) var(--otter-ease);
+}
+.otter-choice input[type='checkbox']::before {
+  border: solid var(--otter-on-action);
+  border-width: 0 0.14em 0.14em 0;
+  transform: rotate(45deg) scale(0);
+  width: 0.3em;
+  height: 0.58em;
+  margin-top: -0.12em;
+}
+.otter-choice input[type='radio']::before {
+  border-radius: 50%;
+  background: var(--otter-on-action);
+}
+.otter-choice input:hover {
+  border-color: var(--otter-action);
+  background: color-mix(in srgb, var(--otter-action) 8%, var(--otter-surface));
+}
+.otter-choice input:checked {
+  border-color: var(--otter-control-active);
+  background: var(--otter-control-active);
+}
+.otter-choice input:checked::before {
+  transform: scale(1);
+}
+.otter-choice input[type='checkbox']:checked::before {
+  transform: rotate(45deg) scale(1);
+}
+.otter-choice input:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px var(--otter-control-ring);
+}
+.otter-choice input:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
 }

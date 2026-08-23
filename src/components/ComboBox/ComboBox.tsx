@@ -18,8 +18,8 @@ export const ComboBox = ({
   value,
   defaultValue = '',
   onChange,
-  placeholder = 'Suchen …',
-  emptyText = 'Keine Ergebnisse',
+  placeholder = 'Search…',
+  emptyText = 'No results',
 }: ComboBoxProps) => {
   const id = useId(),
     rootRef = useRef<HTMLDivElement>(null),
@@ -52,9 +52,7 @@ export const ComboBox = ({
         {label}
       </label>
       <div className="otter-custom-select" data-open={open} ref={rootRef}>
-        <span className="otter-combo-icon" aria-hidden="true">
-          ⌕
-        </span>
+        <i className="otter-combo-icon fas fa-magnifying-glass" aria-hidden="true" />
         <input
           id={`${id}-input`}
           className="otter-combo-input"
@@ -90,9 +88,7 @@ export const ComboBox = ({
             }
           }}
         />
-        <span className="otter-select-chevron" aria-hidden="true">
-          ⌄
-        </span>
+        <i className="otter-select-chevron fas fa-chevron-down" aria-hidden="true" />
         <ul id={`${id}-list`} role="listbox" className="otter-select-popup">
           {filtered.length ? (
             filtered.map((option, index) => (

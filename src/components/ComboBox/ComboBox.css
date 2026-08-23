@@ -2,7 +2,7 @@
   display: grid;
   gap: 0.45em;
   color: var(--otter-muted);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
 }
 .otter-custom-select {
   position: relative;
@@ -26,7 +26,7 @@
   outline: 0;
   background: var(--otter-surface);
   border-color: var(--otter-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--otter-focus) 13%, transparent);
+  box-shadow: 0 0 0 3px var(--otter-control-ring);
 }
 .otter-combo-icon,
 .otter-select-chevron {
@@ -99,7 +99,7 @@
 .otter-select-option small {
   display: block;
   color: var(--otter-muted);
-  font-size: var(--otter-text-xs);
+  font-size: var(--otter-fs-caption);
   font-weight: 400;
 }
 .otter-select-empty {

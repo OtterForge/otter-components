@@ -7,7 +7,7 @@
   width: 100%;
   border-collapse: collapse;
   color: var(--otter-text);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
 }
 .otter-table th,
 .otter-table td {
@@ -18,7 +18,7 @@
 .otter-table th {
   background: var(--otter-surface-soft);
   color: var(--otter-muted);
-  font-size: var(--otter-text-xs);
+  font-size: var(--otter-fs-caption);
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }

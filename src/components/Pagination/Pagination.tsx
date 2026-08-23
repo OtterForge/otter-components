@@ -10,9 +10,9 @@ export const Pagination = ({ page, pageCount, onChange, windowSize = 5 }: Pagina
     start = Math.max(1, Math.min(page - half, pageCount - windowSize + 1)),
     pages = Array.from({ length: Math.min(windowSize, pageCount) }, (_, i) => start + i);
   return (
-    <nav className="otter-pagination" aria-label="Seitennavigation">
-      <button aria-label="Vorherige Seite" disabled={page <= 1} onClick={() => onChange(page - 1)}>
-        ‹
+    <nav className="otter-pagination" aria-label="Pagination">
+      <button aria-label="Previous page" disabled={page <= 1} onClick={() => onChange(page - 1)}>
+        <i className="fas fa-chevron-left" aria-hidden="true" />
       </button>
       {pages.map((item) => (
         <button
@@ -24,11 +24,11 @@ export const Pagination = ({ page, pageCount, onChange, windowSize = 5 }: Pagina
         </button>
       ))}
       <button
-        aria-label="Nächste Seite"
+        aria-label="Next page"
         disabled={page >= pageCount}
         onClick={() => onChange(page + 1)}
       >
-        ›
+        <i className="fas fa-chevron-right" aria-hidden="true" />
       </button>
     </nav>
   );

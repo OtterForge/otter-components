@@ -15,7 +15,7 @@ export const ToastProvider = ({ children }: PropsWithChildren) => {
       () => ({
         toast: (input: ToastInput) => {
           const id = createId('toast');
-          setToasts((items) => [...items, { variant: 'info', ...input, id }]);
+          setToasts((items) => [...items, { variant: 'default', ...input, id }]);
           return id;
         },
         dismiss,

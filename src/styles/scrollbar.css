@@ -1,0 +1,40 @@
+.otter-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--otter-muted) 42%, transparent) transparent;
+}
+
+.otter-scrollbar::-webkit-scrollbar {
+  width: calc(10px * var(--otter-type-scale, 1));
+  height: calc(10px * var(--otter-type-scale, 1));
+  background: transparent;
+}
+
+.otter-scrollbar::-webkit-scrollbar-track,
+.otter-scrollbar::-webkit-scrollbar-track-piece,
+.otter-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.otter-scrollbar::-webkit-scrollbar-thumb {
+  min-width: calc(28px * var(--otter-type-scale, 1));
+  min-height: calc(28px * var(--otter-type-scale, 1));
+  border: 3px solid transparent;
+  border-radius: var(--otter-radius-full, 999px);
+  background: color-mix(in srgb, var(--otter-muted) 42%, transparent);
+  background-clip: padding-box;
+}
+
+.otter-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--otter-muted) 64%, transparent);
+  background-clip: padding-box;
+}
+
+.otter-scrollbar::-webkit-scrollbar-button,
+.otter-scrollbar::-webkit-scrollbar-button:single-button,
+.otter-scrollbar::-webkit-scrollbar-button:horizontal,
+.otter-scrollbar::-webkit-scrollbar-button:vertical {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}

@@ -7,7 +7,7 @@
   border: 1px solid transparent;
   border-radius: var(--otter-radius-full);
   padding: 0.65em 1.2em;
-  font: 750 var(--otter-text-sm)/1 var(--otter-font);
+  font: 750 var(--otter-fs-body)/1 var(--otter-font);
   cursor: pointer;
   transition:
     transform var(--otter-motion-normal) var(--otter-ease),
@@ -37,13 +37,24 @@
   border-color: var(--otter-border);
   color: var(--otter-text);
 }
+.otter-button--secondary:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--otter-action) 35%, var(--otter-border));
+  background: var(--otter-surface-soft);
+}
 .otter-button--ghost {
   background: transparent;
   color: var(--otter-action);
 }
+.otter-button--ghost:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--otter-action) 10%, transparent);
+}
 .otter-button--danger {
   background: var(--otter-danger);
   color: #fff;
+}
+.otter-button--danger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--otter-danger) 84%, #000);
+  box-shadow: 0 7px 20px color-mix(in srgb, var(--otter-danger) 24%, transparent);
 }
 .otter-button--s {
   min-height: calc(34px * var(--otter-type-scale));

@@ -1,4 +1,5 @@
 @import './tokens.css';
+@import './scrollbar.css';
 .otter-root {
   background: var(--otter-page);
   color: var(--otter-text);

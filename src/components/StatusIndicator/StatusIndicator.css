@@ -3,7 +3,7 @@
   align-items: center;
   gap: 0.5em;
   color: var(--otter-muted);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
 }
 .otter-status-dot {
   width: var(--otter-status-size);

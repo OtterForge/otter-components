@@ -9,7 +9,7 @@
   object-fit: cover;
   background: linear-gradient(135deg, var(--otter-primary-600), var(--otter-secondary-500));
   color: #fff;
-  font: 800 var(--otter-text-xs) var(--otter-font);
+  font: 800 var(--otter-fs-caption) var(--otter-font);
 }
 .otter-avatar--s {
   width: var(--otter-avatar-s);

@@ -4,22 +4,22 @@
   padding: 1em;
   border: 1px solid color-mix(in srgb, var(--otter-info) 28%, var(--otter-border));
   border-radius: var(--otter-radius-lg);
-  background: color-mix(in srgb, var(--otter-info) 8%, var(--otter-surface));
+  background: var(--otter-info-soft);
   color: var(--otter-text);
-  font: var(--otter-text-sm)/1.45 var(--otter-font);
+  font: var(--otter-fs-body)/1.45 var(--otter-font);
 }
 .otter-alert strong {
   display: block;
 }
 .otter-alert--success {
   border-color: color-mix(in srgb, var(--otter-success) 28%, var(--otter-border));
-  background: color-mix(in srgb, var(--otter-success) 8%, var(--otter-surface));
+  background: var(--otter-success-soft);
 }
 .otter-alert--warning {
   border-color: color-mix(in srgb, var(--otter-warning) 28%, var(--otter-border));
-  background: color-mix(in srgb, var(--otter-warning) 8%, var(--otter-surface));
+  background: var(--otter-warning-soft);
 }
 .otter-alert--danger {
   border-color: color-mix(in srgb, var(--otter-danger) 28%, var(--otter-border));
-  background: color-mix(in srgb, var(--otter-danger) 8%, var(--otter-surface));
+  background: var(--otter-danger-soft);
 }

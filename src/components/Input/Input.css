@@ -2,7 +2,7 @@
   display: grid;
   gap: 0.45em;
   color: var(--otter-muted);
-  font: var(--otter-text-sm)/1.4 var(--otter-font);
+  font: var(--otter-fs-body)/1.4 var(--otter-font);
 }
 .otter-input-wrap {
   position: relative;
@@ -24,13 +24,14 @@
     box-shadow var(--otter-motion-fast);
 }
 .otter-input:hover {
-  background: color-mix(in srgb, var(--otter-surface-soft) 70%, var(--otter-surface));
+  border-color: color-mix(in srgb, var(--otter-action) 36%, var(--otter-border));
+  background: var(--otter-surface);
 }
 .otter-input:focus {
   outline: 0;
   background: var(--otter-surface);
-  border-color: color-mix(in srgb, var(--otter-focus) 62%, transparent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--otter-focus) 13%, transparent);
+  border-color: var(--otter-focus);
+  box-shadow: 0 0 0 3px var(--otter-control-ring);
 }
 .otter-input[aria-invalid='true'] {
   border-color: color-mix(in srgb, var(--otter-danger) 72%, transparent);
@@ -61,5 +62,5 @@
 }
 .otter-field-error,
 .otter-field-hint {
-  font-size: var(--otter-text-xs);
+  font-size: var(--otter-fs-caption);
 }

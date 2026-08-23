@@ -3,7 +3,7 @@
   align-items: center;
   gap: 0.7em;
   color: var(--otter-text);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
   cursor: pointer;
 }
 .otter-switch {
@@ -11,12 +11,15 @@
   width: calc(50px * var(--otter-type-scale));
   height: calc(28px * var(--otter-type-scale));
   appearance: none;
-  border: 1px solid var(--otter-border);
+  border: 1px solid color-mix(in srgb, var(--otter-text) 18%, var(--otter-border));
   border-radius: 99px;
-  background: var(--otter-surface-soft);
+  background: var(--otter-control);
   cursor: pointer;
   transition: 0.22s;
   box-shadow: inset 0 1px 3px rgb(0 0 0/0.12);
+}
+.otter-switch:hover:not(:disabled) {
+  background: var(--otter-control-hover);
 }
 .otter-switch::before {
   content: '';
@@ -31,8 +34,11 @@
   transition: 0.22s var(--otter-ease);
 }
 .otter-switch:checked {
-  background: var(--otter-action);
-  border-color: var(--otter-action);
+  background: var(--otter-control-active);
+  border-color: var(--otter-control-active);
+}
+.otter-switch:checked:hover:not(:disabled) {
+  background: var(--otter-action-hover);
 }
 .otter-switch:checked::before {
   transform: translateX(calc(22px * var(--otter-type-scale)));

@@ -5,7 +5,12 @@ export interface AlertProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'
   variant?: 'info' | 'success' | 'warning' | 'danger';
   title?: ReactNode;
 }
-const icons = { info: 'ⓘ', success: '✓', warning: '⚠', danger: '!' };
+const icons = {
+  info: 'fas fa-circle-info',
+  success: 'fas fa-circle-check',
+  warning: 'fas fa-triangle-exclamation',
+  danger: 'fas fa-circle-exclamation',
+};
 export const Alert = ({ variant = 'info', title, children, className, ...props }: AlertProps) => {
   return (
     <div
@@ -13,7 +18,7 @@ export const Alert = ({ variant = 'info', title, children, className, ...props }
       className={mergeClassNames('otter-alert', `otter-alert--${variant}`, className)}
       {...props}
     >
-      <span aria-hidden="true">{icons[variant]}</span>
+      <i className={icons[variant]} aria-hidden="true" />
       <span>
         {title ? <strong>{title}</strong> : null}
         {children}

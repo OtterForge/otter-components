@@ -3,7 +3,7 @@ export interface SpinnerProps {
   label?: string;
   size?: number | string;
 }
-export const Spinner = ({ label = 'Wird geladen', size }: SpinnerProps) => {
+export const Spinner = ({ label = 'Loading', size }: SpinnerProps) => {
   return (
     <span
       className="otter-spinner"

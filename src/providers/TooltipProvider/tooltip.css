@@ -6,7 +6,7 @@
   border-radius: var(--otter-radius-sm);
   background: var(--otter-text);
   color: var(--otter-page);
-  font: 650 var(--otter-text-xs)/1.35 var(--otter-font);
+  font: 650 var(--otter-fs-caption)/1.35 var(--otter-font);
   box-shadow: var(--otter-shadow-md);
   pointer-events: none;
   opacity: 0;

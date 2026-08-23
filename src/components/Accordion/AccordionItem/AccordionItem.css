@@ -14,7 +14,7 @@
   border: 0;
   background: transparent;
   color: var(--otter-text);
-  font: 700 var(--otter-text-sm) var(--otter-font);
+  font: 700 var(--otter-fs-body) var(--otter-font);
   text-align: left;
   cursor: pointer;
   transition:
@@ -54,5 +54,5 @@
 .otter-accordion-content {
   padding: 0 1em 1em;
   color: var(--otter-muted);
-  font: var(--otter-text-sm)/1.5 var(--otter-font);
+  font: var(--otter-fs-body)/1.5 var(--otter-font);
 }

@@ -9,8 +9,25 @@
   background: var(--otter-surface-raised);
   color: var(--otter-text);
   box-shadow: var(--otter-shadow-md);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
   animation: otter-toast-in var(--otter-motion-slow) var(--otter-ease) both;
+}
+.otter-toast[data-variant='info'] {
+  border-color: color-mix(in srgb, var(--otter-info) 35%, var(--otter-border));
+  background: var(--otter-info-soft);
+}
+.otter-toast[data-variant='success'] {
+  border-color: color-mix(in srgb, var(--otter-success) 35%, var(--otter-border));
+  background: var(--otter-success-soft);
+}
+.otter-toast[data-variant='warning'] {
+  border-color: color-mix(in srgb, var(--otter-warning) 38%, var(--otter-border));
+  background: var(--otter-warning-soft);
+}
+.otter-toast[data-variant='error'],
+.otter-toast[data-variant='danger'] {
+  border-color: color-mix(in srgb, var(--otter-danger) 35%, var(--otter-border));
+  background: var(--otter-danger-soft);
 }
 .otter-toast[data-leaving='true'] {
   animation: otter-toast-out var(--otter-motion-normal) ease-in both;
@@ -36,6 +53,9 @@
   height: var(--otter-status-size);
   margin-top: 0.35em;
   border-radius: 50%;
+  background: var(--otter-muted);
+}
+.otter-toast-dot--info {
   background: var(--otter-info);
 }
 .otter-toast-dot--success {
@@ -44,7 +64,8 @@
 .otter-toast-dot--warning {
   background: var(--otter-warning);
 }
-.otter-toast-dot--danger {
+.otter-toast-dot--danger,
+.otter-toast-dot--error {
   background: var(--otter-danger);
 }
 @keyframes otter-toast-in {

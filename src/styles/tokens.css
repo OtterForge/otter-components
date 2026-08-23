@@ -32,6 +32,7 @@
   --otter-lh-display: 1.05;
   --otter-lh-heading: 1.2;
   --otter-lh-body: 1.5;
+  /* Deprecated aliases kept for consumers; components use the role tokens above directly. */
   --otter-text-xs: var(--otter-fs-caption);
   --otter-text-sm: var(--otter-fs-body);
   --otter-text-md: var(--otter-fs-body-lg);
@@ -42,14 +43,26 @@
   --otter-text: #101719;
   --otter-muted: #647174;
   --otter-border: #dce3e5;
-  --otter-action: var(--otter-primary-600);
-  --otter-action-hover: var(--otter-primary-700);
-  --otter-focus: var(--otter-secondary-500);
-  --otter-on-action: var(--otter-on-primary-600);
+  --otter-action: var(--otter-primary-600, #168f88);
+  --otter-action-hover: var(--otter-primary-700, #11726d);
+  --otter-focus: var(--otter-primary-600, #168f88);
+  --otter-on-action: var(--otter-on-primary-600, #ffffff);
+  --otter-control: #e2e9eb;
+  --otter-control-hover: color-mix(
+    in srgb,
+    var(--otter-primary-600, #168f88) 14%,
+    var(--otter-control)
+  );
+  --otter-control-active: var(--otter-primary-600, #168f88);
+  --otter-control-ring: color-mix(in srgb, var(--otter-primary-600, #168f88) 22%, transparent);
   --otter-success: #16a36a;
   --otter-warning: #d97706;
   --otter-danger: #dc3545;
   --otter-info: #2563eb;
+  --otter-success-soft: #e8f7f0;
+  --otter-warning-soft: #fff4dd;
+  --otter-danger-soft: #fdecee;
+  --otter-info-soft: #eaf1ff;
   --otter-control-h: 42px;
   --otter-density: 0.875;
   --otter-focus-size: 3px;
@@ -60,6 +73,19 @@
   --otter-motion-slow: 380ms;
   --otter-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+[data-otter-theme] {
+  --otter-action: var(--otter-primary-600, #168f88);
+  --otter-action-hover: var(--otter-primary-700, #11726d);
+  --otter-focus: var(--otter-primary-600, #168f88);
+  --otter-on-action: var(--otter-on-primary-600, #ffffff);
+  --otter-control-hover: color-mix(
+    in srgb,
+    var(--otter-primary-600, #168f88) 14%,
+    var(--otter-control)
+  );
+  --otter-control-active: var(--otter-primary-600, #168f88);
+  --otter-control-ring: color-mix(in srgb, var(--otter-primary-600, #168f88) 22%, transparent);
+}
 [data-otter-theme='dark'] {
   --otter-page: #0b1012;
   --otter-surface: #11191c;
@@ -68,10 +94,22 @@
   --otter-text: #f1f6f5;
   --otter-muted: #96a7aa;
   --otter-border: #27383d;
-  --otter-action: var(--otter-primary-400);
-  --otter-action-hover: var(--otter-primary-300);
-  --otter-focus: var(--otter-secondary-400);
-  --otter-on-action: var(--otter-on-primary-400);
+  --otter-action: var(--otter-primary-400, #56c6bf);
+  --otter-action-hover: var(--otter-primary-300, #8ad8d3);
+  --otter-focus: var(--otter-primary-400, #56c6bf);
+  --otter-on-action: var(--otter-on-primary-400, #101719);
+  --otter-control: #2b3b40;
+  --otter-control-hover: color-mix(
+    in srgb,
+    var(--otter-primary-400, #56c6bf) 18%,
+    var(--otter-control)
+  );
+  --otter-control-active: var(--otter-primary-400, #56c6bf);
+  --otter-control-ring: color-mix(in srgb, var(--otter-primary-400, #56c6bf) 28%, transparent);
+  --otter-success-soft: #102c22;
+  --otter-warning-soft: #32250e;
+  --otter-danger-soft: #35171b;
+  --otter-info-soft: #142544;
   color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -83,10 +121,22 @@
     --otter-text: #f1f6f5;
     --otter-muted: #96a7aa;
     --otter-border: #27383d;
-    --otter-action: var(--otter-primary-400);
-    --otter-action-hover: var(--otter-primary-300);
-    --otter-focus: var(--otter-secondary-400);
-    --otter-on-action: var(--otter-on-primary-400);
+    --otter-action: var(--otter-primary-400, #56c6bf);
+    --otter-action-hover: var(--otter-primary-300, #8ad8d3);
+    --otter-focus: var(--otter-primary-400, #56c6bf);
+    --otter-on-action: var(--otter-on-primary-400, #101719);
+    --otter-control: #2b3b40;
+    --otter-control-hover: color-mix(
+      in srgb,
+      var(--otter-primary-400, #56c6bf) 18%,
+      var(--otter-control)
+    );
+    --otter-control-active: var(--otter-primary-400, #56c6bf);
+    --otter-control-ring: color-mix(in srgb, var(--otter-primary-400, #56c6bf) 28%, transparent);
+    --otter-success-soft: #102c22;
+    --otter-warning-soft: #32250e;
+    --otter-danger-soft: #35171b;
+    --otter-info-soft: #142544;
     color-scheme: dark;
   }
 }
@@ -105,6 +155,38 @@
   --otter-control-h: 48px;
   --otter-type-scale: 1.125;
 }
+/*
+ * Scale-dependent tokens must be resolved on the same element that owns
+ * --otter-type-scale. Defining only their fallbacks on :root would resolve
+ * them before the provider's density value can participate.
+ */
+[data-otter-density] {
+  --otter-space-1: calc(4px * var(--otter-type-scale));
+  --otter-space-2: calc(8px * var(--otter-type-scale));
+  --otter-space-3: calc(12px * var(--otter-type-scale));
+  --otter-space-4: calc(16px * var(--otter-type-scale));
+  --otter-space-5: calc(20px * var(--otter-type-scale));
+  --otter-space-6: calc(24px * var(--otter-type-scale));
+  --otter-space-8: calc(32px * var(--otter-type-scale));
+  --otter-fs-display: calc(40px * var(--otter-type-scale));
+  --otter-fs-h1: calc(30px * var(--otter-type-scale));
+  --otter-fs-h2: calc(22px * var(--otter-type-scale));
+  --otter-fs-body-lg: calc(16px * var(--otter-type-scale));
+  --otter-fs-body: calc(14px * var(--otter-type-scale));
+  --otter-fs-meta: calc(13px * var(--otter-type-scale));
+  --otter-fs-caption: calc(12px * var(--otter-type-scale));
+  --otter-fs-micro: calc(11px * var(--otter-type-scale));
+  --otter-text-xs: var(--otter-fs-caption);
+  --otter-text-sm: var(--otter-fs-body);
+  --otter-text-md: var(--otter-fs-body-lg);
+  --otter-avatar-s: calc(34px * var(--otter-type-scale));
+  --otter-avatar-m: calc(42px * var(--otter-type-scale));
+  --otter-avatar-l: calc(54px * var(--otter-type-scale));
+  --otter-icon-size: calc(16px * var(--otter-type-scale));
+  --otter-spinner-size: calc(28px * var(--otter-type-scale));
+  --otter-status-size: calc(9px * var(--otter-type-scale));
+  --otter-track-size: calc(9px * var(--otter-type-scale));
+}
 [data-otter-contrast='high'] {
   --otter-border: #708185;
   --otter-focus-size: 4px;
@@ -113,7 +195,9 @@
   --otter-success: #1473e6;
   --otter-warning: #9a6700;
   --otter-danger: #d13b00;
-  --otter-focus: #0067c5;
+  --otter-focus: var(--otter-primary-700, #0067c5);
+  --otter-control-active: var(--otter-primary-700, #0067c5);
+  --otter-control-ring: color-mix(in srgb, var(--otter-primary-700, #0067c5) 28%, transparent);
 }
 [data-otter-motion='off'] *,
 [data-otter-motion='off'] *::before,

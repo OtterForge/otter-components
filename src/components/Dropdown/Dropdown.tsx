@@ -58,9 +58,7 @@ export const Dropdown = ({ label, options, value, defaultValue, onChange }: Drop
           }}
         >
           <span id={`${id}-value`}>{current?.label}</span>
-          <span className="otter-select-chevron" aria-hidden="true">
-            ⌄
-          </span>
+          <i className="otter-select-chevron fas fa-chevron-down" aria-hidden="true" />
         </button>
         <ul id={`${id}-list`} role="listbox" className="otter-select-popup">
           {options.map((option, index) => (

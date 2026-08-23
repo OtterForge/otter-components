@@ -29,9 +29,7 @@ export const AccordionItem = ({
         onClick={() => setExpanded(!expanded)}
       >
         <span>{title}</span>
-        <span className="otter-accordion-chevron" aria-hidden="true">
-          ›
-        </span>
+        <i className="otter-accordion-chevron fas fa-chevron-right" aria-hidden="true" />
       </button>
       <div
         id={`${id}-panel`}

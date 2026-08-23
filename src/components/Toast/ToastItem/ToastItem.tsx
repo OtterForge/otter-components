@@ -22,15 +22,16 @@ export const ToastItem = ({
     <div
       className="otter-toast"
       data-leaving={leaving}
-      role={toast.variant === 'danger' ? 'alert' : 'status'}
+      data-variant={toast.variant}
+      role={toast.variant === 'danger' || toast.variant === 'error' ? 'alert' : 'status'}
     >
       <span className={`otter-toast-dot otter-toast-dot--${toast.variant}`} aria-hidden="true" />
       <span>
         <strong>{toast.title}</strong>
         {toast.description ? <small>{toast.description}</small> : null}
       </span>
-      <button type="button" aria-label="Meldung schließen" onClick={close}>
-        ×
+      <button type="button" aria-label="Dismiss notification" onClick={close}>
+        <i className="fas fa-xmark" aria-hidden="true" />
       </button>
     </div>
   );

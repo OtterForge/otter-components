@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './styles/base.css';
 export * from './types/theme';
 export * from './types/options';

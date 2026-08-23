@@ -20,7 +20,7 @@ export const RangeSlider = ({
     right = ((value[1] - min) / (max - min)) * 100,
     background = useMemo(
       () =>
-        `linear-gradient(90deg,var(--otter-border) 0 ${left}%,var(--otter-action) ${left}% ${right}%,var(--otter-border) ${right}%)`,
+        `linear-gradient(90deg,var(--otter-control) 0 ${left}%,var(--otter-control-active) ${left}% ${right}%,var(--otter-control) ${right}%)`,
       [left, right],
     );
   return (
@@ -32,7 +32,7 @@ export const RangeSlider = ({
       </div>
       <div className="otter-range-track" style={{ background }}>
         <input
-          aria-label={`${label} Untergrenze`}
+          aria-label={`${label} lower value`}
           type="range"
           min={min}
           max={max}
@@ -40,7 +40,7 @@ export const RangeSlider = ({
           onChange={(e) => onChange([Math.min(+e.target.value, value[1]), value[1]])}
         />
         <input
-          aria-label={`${label} Obergrenze`}
+          aria-label={`${label} upper value`}
           type="range"
           min={min}
           max={max}

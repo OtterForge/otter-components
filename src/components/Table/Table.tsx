@@ -3,7 +3,7 @@ import { mergeClassNames } from '../../utils/mergeClassNames';
 import './Table.css';
 export const Table = ({ className, ...props }: TableHTMLAttributes<HTMLTableElement>) => {
   return (
-    <div className="otter-table-wrap">
+    <div className="otter-table-wrap otter-scrollbar">
       <table className={mergeClassNames('otter-table', className)} {...props} />
     </div>
   );

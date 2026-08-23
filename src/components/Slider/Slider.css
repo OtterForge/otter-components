@@ -2,7 +2,7 @@
   display: grid;
   gap: 0.45em;
   color: var(--otter-muted);
-  font: var(--otter-text-sm) var(--otter-font);
+  font: var(--otter-fs-body) var(--otter-font);
 }
 .otter-slider > span {
   display: flex;
@@ -10,7 +10,47 @@
 }
 .otter-slider input {
   width: 100%;
-  accent-color: var(--otter-action);
+  height: var(--otter-track-size);
+  appearance: none;
+  border-radius: var(--otter-radius-full);
+  background: var(--otter-control);
+  accent-color: var(--otter-control-active);
+}
+.otter-slider input::-webkit-slider-thumb {
+  appearance: none;
+  width: calc(20px * var(--otter-type-scale));
+  height: calc(20px * var(--otter-type-scale));
+  border: 3px solid var(--otter-surface);
+  border-radius: 50%;
+  background: var(--otter-control-active);
+  box-shadow:
+    0 0 0 1px var(--otter-control-active),
+    var(--otter-shadow-sm);
+  cursor: grab;
+}
+.otter-slider input::-moz-range-thumb {
+  width: calc(16px * var(--otter-type-scale));
+  height: calc(16px * var(--otter-type-scale));
+  border: 3px solid var(--otter-surface);
+  border-radius: 50%;
+  background: var(--otter-control-active);
+  box-shadow: 0 0 0 1px var(--otter-control-active);
+  cursor: grab;
+}
+.otter-slider input:hover {
+  background: var(--otter-control-hover);
+}
+.otter-slider input:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 3px var(--otter-control-ring);
+}
+.otter-slider input:active::-webkit-slider-thumb {
+  cursor: grabbing;
+  transform: scale(1.08);
+}
+.otter-slider input:active::-moz-range-thumb {
+  cursor: grabbing;
+  transform: scale(1.08);
 }
 .otter-slider output {
   color: var(--otter-text);
