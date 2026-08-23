@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import otterComponentsLogo from '../../../assets/branding/otter-components-github.png';
 import { componentDocs, componentGroups } from '../../content/componentDocs';
 
 const groupIcons: Record<string, string> = {
@@ -15,7 +16,7 @@ export const DocsSidebar = ({ currentSlug }: { currentSlug: string }) => {
   return (
     <aside className="docs-sidebar otter-scrollbar" aria-label="Component navigation">
       <a className="docs-sidebar-brand" href="#/components/button">
-        <span aria-hidden="true" />
+        <img src={otterComponentsLogo} alt="Otter Components" />
         <span>
           Otter Components<small>Documentation</small>
         </span>

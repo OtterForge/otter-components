@@ -34,17 +34,12 @@ body {
   line-height: 1.1;
   text-decoration: none;
 }
-.docs-sidebar-brand > span:first-child {
-  width: 34px;
-  height: 34px;
+.docs-sidebar-brand > img {
+  width: 42px;
+  height: 42px;
   flex: none;
-  border-radius: 12px;
-  background: conic-gradient(
-    var(--otter-primary-300),
-    var(--otter-primary-700),
-    var(--otter-secondary-500),
-    var(--otter-primary-300)
-  );
+  border-radius: 100%;
+  object-fit: cover;
 }
 .docs-sidebar-brand small {
   display: block;
