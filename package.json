@@ -1,5 +1,5 @@
 {
-  "name": "@otter/components",
+  "name": "@otterforge/components",
   "version": "0.1.0",
   "description": "Accessible, token-driven React component library",
   "type": "module",
