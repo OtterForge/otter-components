@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import otterComponentsLogo from '../../../assets/branding/otter-components-github.png';
+import otterComponentsLogo from '../../../assets/branding/otter-components-logo.png';
 import { componentDocs, componentGroups } from '../../content/componentDocs';
 
 const groupIcons: Record<string, string> = {

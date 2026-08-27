@@ -58,6 +58,10 @@ body {
   background: var(--otter-page);
   color: var(--otter-muted);
 }
+.docs-search:has(input:focus-visible) {
+  outline: var(--otter-focus-size) solid var(--otter-control-ring);
+  outline-offset: 3px;
+}
 .docs-search input {
   min-width: 0;
   width: 100%;
@@ -66,6 +70,9 @@ body {
   background: transparent;
   color: var(--otter-text);
   font: inherit;
+}
+.docs-search input:focus-visible {
+  outline: 0;
 }
 .docs-nav-group {
   display: grid;

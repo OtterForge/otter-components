@@ -36,8 +36,8 @@ const Documentation = ({
 };
 
 export const App = () => {
-  const [primaryColor, setPrimaryColor] = useState('#20ada4');
-  const [secondaryColor, setSecondaryColor] = useState('#8b5cf6');
+  const [primaryColor, setPrimaryColor] = useState('#99E6D9');
+  const [secondaryColor, setSecondaryColor] = useState('#FFB4A2');
   return (
     <ThemeProvider primaryColor={primaryColor} secondaryColor={secondaryColor}>
       <TooltipProvider>
